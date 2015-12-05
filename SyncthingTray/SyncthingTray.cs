@@ -141,7 +141,7 @@ namespace SyncthingTray
             Invoke(new MethodInvoker(() => textBoxLog.AppendText(e.Data + Environment.NewLine)));
             if (WindowState == FormWindowState.Minimized && !Settings.Default.ShowTrayNotifications)
             {
-                Invoke(new MethodInvoker(() => notifyIcon.ShowBalloonTip(1000, Settings.Default.ApplicationName, e.Data, ToolTipIcon.Info)));
+                //Invoke(new MethodInvoker(() => notifyIcon.ShowBalloonTip(1000, Settings.Default.ApplicationName, e.Data, ToolTipIcon.Info)));
             }
         }
 
@@ -231,7 +231,7 @@ namespace SyncthingTray
                 {
                     if (!File.Exists(expectedPath))
                     {
-                        _gitHubHelper.GetLatestVersion();
+                        //_gitHubHelper.GetLatestVersion();
                     }
                     else
                     {
